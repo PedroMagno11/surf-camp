@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <style>
+      /* Estilos CSS */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"], select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+      }
+
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .form-group label.error {
+        color: #f00;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+
+      .form-group input.error, .form-group select.error {
+        border-color: #f00;
+      }
+
+      .form-group input.valid, .form-group select.valid {
+        border-color: #00ff00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Checkout</h1>
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+          <label class="error" for="name">Por favor, insira seu nome</label>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="email" required>
+          <label class="error" for="email">Por favor, insira um e-mail válido</label>
+        </div>
+        <div class="form-group">
+          <label for="address">Endereço</label>
+          <input type="text" id="address" name="address" required>
+          <label class="error" for="address">Por favor, insira seu endereço</label>
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Método de pagamento</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="">-- Selecione um método de pagamento --</option>
+            <option value="credit-card">Cartão de crédito</option>
+            <option value="paypal">PayPal</option>
+          </select>
+          <label class="error" for="payment-method">Por favor, selecione um método de pagamento</label>
+        </div>
+        <input type="submit" value="Finalizar compra

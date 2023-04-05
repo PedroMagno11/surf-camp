@@ -1,0 +1,306 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald';
+    
+}
+body{
+    background-image:url("../img/background-page.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    background-image: url('../img/banner-home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+header .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:transparent;
+}
+header .logo{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-bar .nav-list{
+    display: flex;
+}
+
+.nav-list .nav-item{
+    margin-left: 20px;
+    list-style: none;
+
+}
+
+.nav-item .nav-link{
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+.nav-item .nav-link:hover{
+    opacity: 0.7;
+}
+
+.mobile-menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu-icon .line{
+    width: 30px;
+    height: 3px;
+    margin: 6px;
+    background-color: #fff;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.open-menu{
+    display: block;
+}
+
+
+.banner{
+    padding: 20px;
+    align-self: flex-start;
+
+}
+.banner h1{
+    font-size: 50px;
+}
+.banner h2{
+    font-size: 30px;
+}
+.main-content{
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.galeria{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.galeria img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.previa{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.previa .description{
+    display: flex;
+    flex-direction: column;
+}
+
+.previa .description .legenda{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+}
+
+.previa .description .legenda .legenda-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.legenda .legenda-item .item-img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.previa .btn-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #57C5B6;
+    transition: 0.3s;
+}
+
+.previa .btn-contato a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.previa .btn-contato:hover{
+    cursor: pointer;
+    background-color:#159895 ;
+}
+
+
+.collapse-sumario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sobre{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.sobre .sobre-text{
+    margin-right: 10px;
+}
+.sobre .sobre-text p{
+    margin-top: 10px;
+}
+
+.sobre .sobre-img img{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px #fffFFF70;
+}
+
+.contato{
+    background-image: url('../img/background-contato.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contato.contato-formulario{
+    margin-right: 20px;
+}
+.contato .contato-formulario .formulario{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.contato .contato-formulario .formulario .campo{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+
+.contato .contato-formulario .formulario textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contato .contato-formulario .formulario .btn-envio{
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: #57C5B6;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.contato .contato-formulario .formulario .btn-envio:hover{
+    background-color: #159895;
+}
+
+footer{
+    height: 12vw;
+    background-color: #232323;
+}
+
+@media screen and (max-width:730px){
+
+    .nav-bar .nav-list{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block;
+    }
+
+    .mobile-menu{
+        display: block;
+        background-color: #00000090;
+        z-index: 999;
+    }
+    .mobile-menu .nav-list{
+        display: flex;
+        margin: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 50vh;
+    }
+    .mobile-menu .nav-item{
+        margin-left: 0;
+    }
+    .previa{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .previa .btn-contato{
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    .sobre{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .sobre .sobre-text h1{
+        font-size: 28px;
+    }
+    .sobre .sobre-img img{
+        width: 260px;
+        margin-bottom: 10px;
+    }
+
+    .contato{
+        display: flex;
+        flex-direction: column;;
+    }
+
+    .contato .contato-formas{
+        margin-top: 30px;
+    }
+    .contato .contato-formulario {
+        align-self: center;
+        margin-top: 130px;
+    }
+    .contato .contato-formulario .formulario{
+        width: 260px;
+    }
+}
